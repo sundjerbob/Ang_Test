@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Employee } from './employee.model';
+import { Employee } from '../model/employee.model';
 
 @Injectable({
   providedIn: 'root',
@@ -63,10 +63,12 @@ export class EmployeeService {
       return 0;
     }
 
-    // Calculate time window in minutes
+    // Calculate time window in milliseconds
     const timeDifferenceMs = endDateTime.getTime() - startDateTime.getTime();
 
-    // Convert milliseconds to minutes and return *whole* number of minutes
+    // Convert milliseconds to minutes
     return timeDifferenceMs / (1000 * 60);
   }
+
+
 }

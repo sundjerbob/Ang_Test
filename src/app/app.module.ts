@@ -3,22 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {EmployeeModule} from "./employee/employee.module";
 
+import {Chart} from 'chart.js';
+import { registerables } from 'chart.js';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {EmployeeModule} from "./employee/employee.module";
+Chart.register(...registerables);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     EmployeeModule
   ],
   exports: [
-
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 

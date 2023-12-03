@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {EmployeeService} from "./employee/employee.service";
-import {Employee} from "./employee/employee.model";
+import {EmployeeService} from "./employee/service/employee.service";
+import {Employee} from "./employee/model/employee.model";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
-    // Call the service method to get employee data
+    // Call the service method to get employee data to drill into data render components (table, chart)
     this.employeeService.getEmployees().subscribe(employees => {
       this.employees = employees;
     });
