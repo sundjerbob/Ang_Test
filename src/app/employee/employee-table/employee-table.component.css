@@ -1,0 +1,40 @@
+/* employee-table.component.css */
+h1 {
+  margin: auto;
+  font-size: 40px;
+  text-align: center;
+  padding: 50px;
+}
+
+/* Apply styles to the entire table */
+table {
+  width: 75vw;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: 18px;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+/* Style the 'Edit' link */
+a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+  /* Hover effect for the 'Edit' link */
+  a:hover {
+    color: darkblue;
+  }

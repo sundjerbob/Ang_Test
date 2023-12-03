@@ -1,0 +1,20 @@
+
+<h1>Working Hours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total Time in Month</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngStyle]="{ background: employee.totalTimeWorked < 100 ? '#ffcccc' : 'white' }"
+      *ngFor="let employee of employees">
+      <td>{{ employee.employeeName }}</td>
+      <td>{{ employee.totalTimeWorked }} hr</td>
+      <td><a href="#" style="color: blue; text-decoration: underline;">{{ editLabel }}</a></td>
+    </tr>
+  </tbody>
+</table>
